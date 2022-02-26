@@ -46,10 +46,10 @@ function gerarPPPOE(e){
 
 
   boxResults.innerHTML = `
-    <p>Nome do Cliente: ${dados.nomeCliente} </p>
-    <p>Login PPPoE: ${dados.loginPPPOE}jpr </p>
-    <p>Senha PPPoE: ${dados.senhaPPPOE} </p>
-    <p>Senha Modem: Speed@${dados.senhaModem} </p>
+    <p><b>Nome do Cliente:</b>  ${dados.nomeCliente} </p>
+    <p><b>Login PPPoE:</b> ${dados.loginPPPOE}jpr </p>
+    <p><b>Senha PPPoE:</b> ${dados.senhaPPPOE} </p>
+    <p><b>Senha Modem:</b> Speed@${dados.senhaModem} </p>
   `
 }
 
