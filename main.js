@@ -40,8 +40,23 @@ function pedirLiberacao(e){
   e.preventDefault()
   const select = document.getElementById('contacts')
   const option = select.options[select.selectedIndex].value;
-  const text = document.querySelector('.results')
+  let dados = {
+    nomeCliente: client.value,
+    loginPPPOE: loginPPPOE.value,
+    senhaPPPOE: senhaPPPOE.value,
+    senhaModem: senhaModem.value
+  }
+
+  const text = `
+  *Nome do Cliente:* ${dados.nomeCliente}\n
+  *Login PPPoE:* ${dados.loginPPPOE}jpr \n 
+  *Senha PPPoE:* ${dados.senhaPPPOE} \n
+  *Senha Modem:* Speed@${dados.senhaModem}
+  `
+
+  console.log(text);
   
-  window.open(`https://api.whatsapp.com/send?phone=55${option}&text=${text.textContent}`, '_blank')
+  
+  window.open(`https://api.whatsapp.com/send?phone=55${option}&text=${text}`, '_blank')
 
 }
