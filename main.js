@@ -53,10 +53,10 @@ function pedirLiberacao(e){
   *Senha PPPoE:* ${dados.senhaPPPOE} \n
   *Senha Modem:* Speed@${dados.senhaModem}
   `
-
+  const msg = window.encodeURI(text)
   console.log(text);
   
   
-  window.open(`https://api.whatsapp.com/send?phone=55${option}&text=${text}`, '_blank')
+  window.open(`https://api.whatsapp.com/send?phone=55${option}&text=${msg}`, '_blank')
 
 }
