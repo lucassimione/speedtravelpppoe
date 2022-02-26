@@ -63,7 +63,7 @@ function pedirLiberacao(e){
     senhaPPPOE: senhaPPPOE.value,
     senhaModem: senhaModem.value
   }
-  const text = " *Nome do Cliente:*  " + dados.nomeCliente + "\n" + "*Login PPPoE:* " + dados.loginPPPOE + "jpr" + "\n" + "  *Senha PPPoE:*  " + dados.senhaPPPOE + " *Senha Modem:*  " + "Speed@" + dados.senhaModem
+  const text = " *Nome do Cliente:*  " + dados.nomeCliente + "\n" + "*Login PPPoE:* " + dados.loginPPPOE + "jpr" + "\n" + "  *Senha PPPoE:*  " + dados.senhaPPPOE + "\n" + "*Senha Modem:*  " + "Speed@" + dados.senhaModem
  
   const msg = window.encodeURIComponent(text)
   console.log(text);
