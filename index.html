@@ -9,37 +9,45 @@
   <title>SpeedTravel PPPoE Creator</title>
 </head>
 <body>
-  <div class="container">
-
-
+    <div class="logo">
     <img src="https://speedtravel-site.s3.sa-east-1.amazonaws.com/assets/svg/logos/logo-dark.svg" alt="logo speed"/>
+    <div>
+      <p>No campo LoginPPPoE não precisa adicionar o "jpr" no final, <br>nem no campo Senha modem precisa adicionar "Speed@" pois o site já adiciona automaticamente.</p>
+    </div>
+  </div>
 
 
     <div class="container-fluid container-sm">
-     <form>
-        <label for="Cliente" class="form-label">Cliente</label>
-        <input type="email" class="cliente" id="Cliente" aria-describedby="emailHelp">
-        <label for="Cliente" class="form-label">Login PPPoE:</label>
-        <input type="email" class="loginPPPOE" id="Cliente" aria-describedby="emailHelp">
-        <label for="Cliente" class="form-label">Senha PPPoE</label>
-        <input type="email" class="senhaPPPOE" id="Cliente" aria-describedby="emailHelp">
-        <label for="Cliente" class="form-label">Senha Modem:</label>
-        <input type="email" class="senhaModem" id="Cliente" aria-describedby="emailHelp" placeholder="Speed@...">
-        <button class="gerar">Gerar</button>
-     </form>
+     <form class="form">
+        <label for="Cliente" class="form-label"><b>Cliente</b></label>
+        <input type="text" class="cliente" id="Cliente" aria-describedby="emailHelp">
+        <label for="Cliente" class="form-label"><b>Login PPPoE</b></label>
+        <input type="text" class="loginPPPOE" id="Cliente" aria-describedby="emailHelp">
+        <label for="Cliente" class="form-label"><b>Senha PPPoE</b></label>
+        <input type="text" class="senhaPPPOE" id="Cliente" aria-describedby="emailHelp">
+        <label for="Cliente" class="form-label"><b>Senha Modem</b></label>
+        <input type="text" class="senhaModem" id="Cliente" aria-describedby="emailHelp" placeholder="Speed@...">
+      <div class="buttons">
+          <button class="gerar">Gerar</button>
+          <button class="resetar">Resetar</button>
+      </div>
+      </form>
      <div class="results">
 
      </div>
      <div class="contatosN2">
        <p>Contatos de Liberação de sinal</p>
        <select name="contacts" id="contacts">
-         <option value="69999462554" selected>Artur</option>
-         <option value="69993736910">Jaque</option>
+         <option value="69992733866" selected>Elvis</option>
+         <option value="69992703091">Higor</option>
+         <option value="69984090620">Naellen</option>
+         <option value="69992560294">Isadora</option>
+         <option value="69992341172">Wilian</option>
        </select>
        <button class="btn_liberacao">Enviar Liberação</button>
      </div>
     </div>
-  </div>
+ 
 
 
   <script type="module" src="firebase.js"></script>
