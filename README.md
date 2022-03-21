@@ -21,6 +21,7 @@ Resolvi então criar um mini-app onde vamos digitar uma única vez e mandar pra 
 
 ## Screenshots
 Preenche com os dados do cliente:
+
 ![preenchido](https://i.imgur.com/4l6XxyZ.png)
 
 Após clicar em gerar, mostra como ficaram os dados.
