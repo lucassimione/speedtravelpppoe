@@ -1,7 +1,6 @@
 const client = document.querySelector('.cliente')
 const loginPPPOE = document.querySelector('.loginPPPOE')
 const senhaPPPOE = document.querySelector('.senhaPPPOE')
-const senhaModem = document.querySelector('.senhaModem')
 const codigoAparelho = document.querySelector('.codigoAparelho')
 const caixaCTO = document.querySelector('.caixaCTO')
 const porta = document.querySelector('.porta')
@@ -47,27 +46,25 @@ function GeraSenha(){
     return senhaGerada;
 }
 
-senhaModem.addEventListener('click',()=>{
-  senhaModem.value = GeraSenha()
-})
+
+
 
 
 
 function gerarPPPOE(e){
   e.preventDefault();
-  if(client.value === '' || loginPPPOE === ' ' || senhaPPPOE === '' || senhaModem === '' ){
-    alert('Preencha os campos')
-    return
-  }
   let dados = {
     nomeCliente: client.value,
     loginPPPOE: loginPPPOE.value,
     senhaPPPOE: senhaPPPOE.value,
-    senhaModem: senhaModem.value,
+    senhaModem: GeraSenha(),
     codigoAparelho: codigoAparelho.value,
     caixaCTO: caixaCTO.value,
     porta: porta.value
-
+  }
+  if(client.value === '' || loginPPPOE === ' ' || senhaPPPOE === '' ){
+    alert('Preencha os campos')
+    return
   }
 
   console.log(dados)
@@ -97,7 +94,7 @@ function pedirLiberacao(e){
     nomeCliente: client.value,
     loginPPPOE: loginPPPOE.value,
     senhaPPPOE: senhaPPPOE.value,
-    senhaModem: senhaModem.value,
+    senhaModem: GeraSenha(),
     codigoAparelho: codigoAparelho.value,
     caixaCTO: caixaCTO.value,
     porta: porta.value
