@@ -102,7 +102,7 @@ function pedirLiberacao(e){
     caixaCTO: caixaCTO.value,
     porta: porta.value
   }
-  const text = " *Nome do Cliente:*  " + dados.nomeCliente + "\n" + "*Login PPPoE:* " + dados.loginPPPOE + "jpr" + "\n" + "*Senha PPPoE:*  " + dados.senhaPPPOE + "\n" + "*Senha Modem:*  " + "Speed@" + dados.senhaModem
+  const text = " *Nome do Cliente:*  " + dados.nomeCliente + "\n" + "*Login PPPoE:* " + dados.loginPPPOE + "jpr" + "\n" + "*Senha PPPoE:*  " + dados.senhaPPPOE + "\n" + "*Senha Modem:*  " + "Speed@" + dados.senhaModem + "\n" + "Código do Aparelho: " + dados.codigoAparelho + "\n" + "Caixa: " + dados.caixaCTO + "\n" + "Porta: " + dados.porta
  
   const msg = window.encodeURIComponent(text)
   console.log(text);
