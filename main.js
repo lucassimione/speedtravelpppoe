@@ -59,10 +59,10 @@ function gerarPPPOE(e){
     caixaCTO: caixaCTO.value,
     porta: porta.value
   }
-  // if(client.value === '' || loginPPPOE === ' ' || senhaPPPOE === '' ){
-  //   alert('Preencha os campos')
-  //   return
-  // }
+  if(client.value === '' || loginPPPOE === ' ' || senhaPPPOE === '' ){
+     alert('Preencha os campos')
+     return
+   }
 
   console.log(dados)
 
