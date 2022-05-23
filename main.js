@@ -5,6 +5,7 @@ const codigoAparelho = document.querySelector('.codigoAparelho')
 const caixaCTO = document.querySelector('.caixaCTO')
 const porta = document.querySelector('.porta')
 
+
 const form = document.querySelector('.form')
 
 const btn_gerar = document.querySelector('.gerar')
@@ -14,6 +15,7 @@ const btn_reset = document.querySelector('.resetar')
 
 btn_gerar.addEventListener('click',gerarPPPOE);
 btn_Liberacao.addEventListener('click',pedirLiberacao)
+
 btn_reset.addEventListener('click',(e)=>{
   e.preventDefault()
   form.reset()
@@ -33,10 +35,10 @@ function GeraSenha(){
   let senhaGerada = ''
     for(let i=0; i<2; i++){
 
-      let sortMaiusculas = Math.floor(Math.random() * (25 - 0) + 0);
-      let sortMinusculas = Math.floor(Math.random() * (25 - 0) + 0);
+      let sortMaiusculas = Math.floor(Math.random() * 25);
+      let sortMinusculas = Math.floor(Math.random() * 25);
       let sortNumeros = Math.floor(Math.random() * (10 - 0) + 0);
-  
+      
       // console.log(maiusculas[sortMaiusculas])
       // console.log(minusculas[sortMinusculas])
       // console.log(numeros[sortNumeros])
@@ -45,11 +47,6 @@ function GeraSenha(){
     
     return senhaGerada;
 }
-
-
-
-
-
 
 function gerarPPPOE(e){
   e.preventDefault();
@@ -62,10 +59,10 @@ function gerarPPPOE(e){
     caixaCTO: caixaCTO.value,
     porta: porta.value
   }
-  if(client.value === '' || loginPPPOE === ' ' || senhaPPPOE === '' ){
-    alert('Preencha os campos')
-    return
-  }
+  // if(client.value === '' || loginPPPOE === ' ' || senhaPPPOE === '' ){
+  //   alert('Preencha os campos')
+  //   return
+  // }
 
   console.log(dados)
 
@@ -83,8 +80,35 @@ function gerarPPPOE(e){
     <p><b>Código do Aparelho:</b>${dados.codigoAparelho} </p>
     <p><b>Caixa:</b>${dados.caixaCTO} </p>
     <p><b>Porta:</b>${dados.porta} </p>
+    <p><b>Vlan:</b> ${CalculaVlan(dados.caixaCTO)} </p>
   `
 }
+
+function CalculaVlan(caixa){
+  let vlanCerta;
+
+  if(caixa>=480){
+    let menorCaixa = 480;
+    let plus = 128;
+    let vlan = 17;
+    
+    while(menorCaixa <= Number(caixa)){
+      menorCaixa += plus
+      vlan++
+     if(menorCaixa >= Number(caixa)){
+        vlanCerta = vlan;
+       break;
+     }
+    }
+
+  }else if(caixa <= 479){
+    let vlan = Number(caixa / 64);
+    vlanCerta = '1'+ Math.trunc(vlan);
+  }
+  return vlanCerta
+}
+
+
 
 function pedirLiberacao(e){
   e.preventDefault()
