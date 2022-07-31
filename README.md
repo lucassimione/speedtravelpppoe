@@ -3,17 +3,15 @@
 
 Esse site foi criado a partir da ideia do <a href="https://github.com/artur-calderon"> Artur Calderon </a> em economizar tempo e padronizar a rotina de liberação de sinal em um cliente de internet da <a href="https://speedtravel.com.br/">SpeedTravel Telecom</a>.
 
-## Informações que precisam ser repetidas:
+## Informações que precisam ser repassadas para o Suporte N2 liberar o acesso do cliente:
 
-- Nome completo do cliente
+- Nome completo e código do cliente
 - Login PPPoE
 - Senha PPPoE
-- Senha do Roteador
+- Senha de admin do modem
 - Caixa que o cliente está conectado (fibra)
-- Porta em que o cliente está conectado
-- Código do aparelho (Serial)
-
-
+- Porta da caixa no qual o cliente foi conectado
+- Serial do modem
 
 ## Screenshots
 Preenche com os dados do cliente:
