@@ -3,12 +3,6 @@
 
 Esse site foi criado a partir da ideia do <a href="https://github.com/artur-calderon"> Artur Calderon </a> em economizar tempo e padronizar a rotina de liberação de sinal em um cliente de internet da <a href="https://speedtravel.com.br/">SpeedTravel Telecom</a>.
 
-Na empresa onde eu trabalho, que é um provedor de internet, toda vez que vamos instalar o roteador
-na casa do cliente, temos que mandar por whatsapp algumas informações para liberar o acesso daquele cliente 
-para internet.
-E toda vez temos que ficar digitando as mesmas coisas e ficar copiando e colando cada coisa para cada conversa do whatsapp.
-Resolvi então criar um mini-app onde vamos digitar uma única vez e mandar pra quantos contatos quisermos pelo whatsapp já formatado. 
-
 ## Informações que precisam ser repetidas:
 
 - Nome completo do cliente
