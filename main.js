@@ -1,17 +1,14 @@
 const client = document.querySelector('.cliente')
-const loginPPPOE = document.querySelector('.loginPPPOE')
-const senhaPPPOE = document.querySelector('.senhaPPPOE')
+const PPPOE = document.querySelector('.loginPPPOE')
 const codigoAparelho = document.querySelector('.codigoAparelho')
 const caixaCTO = document.querySelector('.caixaCTO')
 const porta = document.querySelector('.porta')
-
 
 const form = document.querySelector('.form')
 
 const btn_gerar = document.querySelector('.gerar')
 const btn_Liberacao = document.querySelector('.btn_liberacao') 
 const btn_reset = document.querySelector('.resetar') 
-
 
 btn_gerar.addEventListener('click',gerarPPPOE);
 btn_Liberacao.addEventListener('click',pedirLiberacao)
@@ -52,14 +49,14 @@ function gerarPPPOE(e){
   e.preventDefault();
   let dados = {
     nomeCliente: client.value,
-    loginPPPOE: loginPPPOE.value,
-    senhaPPPOE: senhaPPPOE.value,
+    loginPPPOE: PPPOE.value,
+    senhaPPPOE: PPPOE.value,
     senhaModem: GeraSenha(),
     codigoAparelho: codigoAparelho.value,
     caixaCTO: caixaCTO.value,
     porta: porta.value
   }
-  if(client.value === '' || loginPPPOE === ' ' || senhaPPPOE === '' ){
+  if(client.value === '' || PPPOE === ' '){
      alert('Preencha os campos')
      return
    }
@@ -75,7 +72,7 @@ function gerarPPPOE(e){
   boxResults.innerHTML = `
     <p><b>Nome do Cliente:</b>  ${dados.nomeCliente} </p>
     <p><b>Login PPPoE:</b> ${dados.loginPPPOE}jpr </p>
-    <p><b>Senha PPPoE:</b> ${dados.senhaPPPOE} </p>
+    <p><b>Senha PPPoE:</b> ${dados.loginPPPOE} </p>
     <p><b>Senha Modem:</b> Speed@${dados.senhaModem} </p>
     <p><b>Código do Aparelho:</b>${dados.codigoAparelho} </p>
     <p><b>Caixa:</b>${dados.caixaCTO} </p>
