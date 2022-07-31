@@ -24,8 +24,8 @@ btn_reset.addEventListener('click',(e)=>{
 })
 
 function GeraSenha(){
-  let maiusculas =['A','B','C', 'D', 'E', 'F' ,'G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','W','X','Y','Z']
-  let minusculas =['a','b','c', 'd', 'e', 'f' ,'g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','w','x','y','z']
+  let maiusculas =['A','B','C', 'D', 'E', 'F' ,'G','H','J','K','L','M','N','O','P','Q','R','S','T','U','W','X','Y','Z']
+  let minusculas =['a','b','c', 'd', 'e', 'f' ,'g','h','i','j','k','m','n','o','p','q','r','s','t','u','w','x','y','z']
 
   let numeros =['0','1','2', '3', '4', '5' ,'6','7','8', '9']
   
